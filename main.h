@@ -17,7 +17,6 @@
 void spiwrite(uint32_t byte);
 void spiinit(void);
 void pllinit(uint32_t freq);
-//void setfreq(uint32_t freq);
 
 //Definitionen PLL SPI Interface
 #define     SPI_SCK_PORT    PORTB
