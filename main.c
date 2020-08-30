@@ -46,7 +46,8 @@ int main(void)
     
     while(1)
     {
-        //Hier tun wir nicht, außer ein bischen geblinke :-)
+        /*
+         //Hier tun wir nicht, außer ein bischen geblinke :-)
         LED_BEAT_PORT |= (1 << LED_BEAT_PIN);   //LED an
         _delay_ms(100);
         LED_BEAT_PORT &= ~(1 << LED_BEAT_PIN);  //LED aus
@@ -56,10 +57,11 @@ int main(void)
         LED_BEAT_PORT&= ~(1 << LED_BEAT_PIN);   //LED aus
         _delay_ms(700);
         //ggf den MC in den Sleep Mode versetzen, aus dem er nicht wieder aufwacht, um Störungen durch diesen zu minimieren.
-        /*
+        */
+        
         set_sleep_mode(SLEEP_MODE_PWR_DOWN);    //Sleep Mode definieren
         sleep_mode();                           //Sleep Mode aktivieren
-        */
+    
 	}
     return 0;
 }
@@ -87,7 +89,8 @@ void pllinit(uint32_t freq)
     uint32_t    B;
     
     //Brechne Register R,A und B anhand der in der main.h festgelegten Parameter
-    R=Referenz/Step;
+   
+    R=(Referenz/Step);
     B=(freq/Step)/Prescaler;
     A=(freq/Step)-(Prescaler*B);
     

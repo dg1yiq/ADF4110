@@ -70,7 +70,7 @@ void pllinit(uint32_t freq);
 
 #define     Frequenz            144300000
 #define     Referenz            25000000
-#define     Step                2500
+#define     Step                100000
 #define     Prescaler           8
 #define     Prescaler_Reg       Pres_8
 #define     MuxPin              0b001       //MUX Parameter (010 = N Out, 001 = Digital Lock Detect, 100 = R Out)
